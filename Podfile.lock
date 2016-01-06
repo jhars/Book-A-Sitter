@@ -1,0 +1,13 @@
+PODS:
+  - DJKFlipper (0.1.6)
+  - Firebase (2.5.0)
+
+DEPENDENCIES:
+  - DJKFlipper
+  - Firebase (>= 2.5.0)
+
+SPEC CHECKSUMS:
+  DJKFlipper: 8bb5e316954aa73ccb5adec6824e01271fd82777
+  Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
+
+COCOAPODS: 0.39.0
