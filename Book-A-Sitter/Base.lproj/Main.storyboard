@@ -51,18 +51,11 @@
                         <viewControllerLayoutGuide type="bottom" id="evI-zg-SfF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2kR-Xg-udJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C81-xA-bwf">
-                                <rect key="frame" x="227" y="248" width="147" height="103"/>
-                                <state key="normal" title="FIRE!"/>
-                                <connections>
-                                    <action selector="firebaseBtnTapped:" destination="mLH-Df-gTp" eventType="touchUpInside" id="ObC-s5-xh1"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-vs-1Ag">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-vs-1Ag">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="44"/>
                                 <items>
                                     <navigationItem title="FireBase Create New User" id="Vs7-dA-Lqc">
                                         <barButtonItem key="rightBarButtonItem" title="Current User &gt;" id="PJp-7K-ZqZ">
@@ -73,14 +66,18 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C81-xA-bwf">
+                                <rect key="frame" x="114" y="282" width="147" height="103"/>
+                                <state key="normal" title="FIRE!"/>
+                                <connections>
+                                    <action selector="firebaseBtnTapped:" destination="mLH-Df-gTp" eventType="touchUpInside" id="ObC-s5-xh1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="C81-xA-bwf" firstAttribute="centerY" secondItem="2kR-Xg-udJ" secondAttribute="centerY" id="1AB-kH-LBh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LeM-vs-1Ag" secondAttribute="trailing" constant="-20" id="9bP-gO-DzU"/>
-                            <constraint firstItem="LeM-vs-1Ag" firstAttribute="leading" secondItem="2kR-Xg-udJ" secondAttribute="leadingMargin" constant="-20" id="UwR-3Q-G4H"/>
-                            <constraint firstItem="C81-xA-bwf" firstAttribute="centerX" secondItem="2kR-Xg-udJ" secondAttribute="centerX" id="XOk-SU-yai"/>
-                            <constraint firstItem="LeM-vs-1Ag" firstAttribute="top" secondItem="2kR-Xg-udJ" secondAttribute="topMargin" id="lul-ze-hCq"/>
+                            <constraint firstItem="C81-xA-bwf" firstAttribute="centerX" secondItem="2kR-Xg-udJ" secondAttribute="centerX" id="PH6-Lh-jf5"/>
+                            <constraint firstItem="C81-xA-bwf" firstAttribute="centerY" secondItem="2kR-Xg-udJ" secondAttribute="centerY" id="c5W-kK-8Ur"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -97,16 +94,21 @@
                         <viewControllerLayoutGuide type="bottom" id="haZ-43-vxI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zTf-Zy-KHw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-P7-YKM">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-P7-YKM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="FireBase Current User?" id="pan-C5-aJ3">
+                                    <navigationItem title="Current User" id="pan-C5-aJ3">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Br9-HT-r5g">
                                             <connections>
                                                 <segue destination="mLH-Df-gTp" kind="show" id="8ek-c3-jJe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="SFSafariVC" id="mUp-4n-yce">
+                                            <connections>
+                                                <segue destination="zHk-wH-UQ7" kind="show" id="yRF-U3-FVw"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -114,11 +116,58 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vO9-P7-YKM" firstAttribute="top" secondItem="zTf-Zy-KHw" secondAttribute="top" id="Bjg-rH-Bo1"/>
+                            <constraint firstItem="vO9-P7-YKM" firstAttribute="leading" secondItem="zTf-Zy-KHw" secondAttribute="leading" id="Z37-jv-9D9"/>
+                            <constraint firstAttribute="trailing" secondItem="vO9-P7-YKM" secondAttribute="trailing" id="xJg-k9-elD"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suM-me-t6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="669"/>
+            <point key="canvasLocation" x="1078.5" y="668.5"/>
+        </scene>
+        <!--Safari View Controller-->
+        <scene sceneID="3bW-t3-njO">
+            <objects>
+                <viewController id="zHk-wH-UQ7" customClass="SafariViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WL9-M9-WgF"/>
+                        <viewControllerLayoutGuide type="bottom" id="OtX-jQ-Aov"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yGi-to-LQR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHB-iC-aIp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Login via Node thru Safari" id="0lT-st-Cbh"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydE-5Z-Do8">
+                                <rect key="frame" x="91" y="319" width="193" height="30"/>
+                                <state key="normal" title="Open With SFSafariServices"/>
+                                <connections>
+                                    <action selector="openWithSafariVC:" destination="zHk-wH-UQ7" eventType="touchUpInside" id="yx9-A7-Vor"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ydE-5Z-Do8" firstAttribute="centerY" secondItem="yGi-to-LQR" secondAttribute="centerY" id="0fB-Fu-6Kw"/>
+                            <constraint firstItem="ydE-5Z-Do8" firstAttribute="centerX" secondItem="yGi-to-LQR" secondAttribute="centerX" id="T1N-Ng-q9F"/>
+                            <constraint firstItem="RHB-iC-aIp" firstAttribute="top" secondItem="yGi-to-LQR" secondAttribute="topMargin" id="VDc-kB-xIO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RHB-iC-aIp" secondAttribute="trailing" constant="-20" id="jMx-bF-bjX"/>
+                            <constraint firstItem="RHB-iC-aIp" firstAttribute="leading" secondItem="yGi-to-LQR" secondAttribute="leadingMargin" constant="-20" id="kbm-Pg-Bts"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbj-O7-kPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1520.5" y="668.5"/>
         </scene>
     </scenes>
 </document>
