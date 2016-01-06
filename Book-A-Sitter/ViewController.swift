@@ -19,6 +19,8 @@ class ViewController: UIViewController, DJKFlipperDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+// => Setup an ol'Fashioned  FOR-LOOP here...
+        
         var page1 = PageTestViewController(nibName: "PageTestViewController", bundle: nil)
         page1.view.frame = self.view.bounds
         page1.backgroundImage.image = UIImage(named: "page1")

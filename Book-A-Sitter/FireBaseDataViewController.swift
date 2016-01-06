@@ -12,7 +12,7 @@ import Firebase
 class FireBaseDataViewController: UIViewController {
 
       var ref = Firebase(url: "https://sitterbookdevapi.firebaseio.com/")
-      var userEmail = "jon@madlax.com"
+      var userEmail = "SitterTest01@SitterBook.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +20,11 @@ class FireBaseDataViewController: UIViewController {
   
     }
 
-    //firebaseBtnTapped
-    
-    
-
-    
-    
     @IBAction func firebaseBtnTapped(sender: AnyObject) {
         self.ref.createUser(self.userEmail, password: "1111", withValueCompletionBlock:{(result) -> Void in
             print("success sign up!")
             //                                var userID = result.uid
+            //Do I want to Use Facebook OAuth Through FireBAse HERE??
             print(result)
             print("result above")
             
@@ -37,6 +32,7 @@ class FireBaseDataViewController: UIViewController {
             self.ref.authUser(self.userEmail, password:"1111", withCompletionBlock: { (authData) -> Void in
                 //                                    var userId = result.authData.uid
                 print(authData)
+                
                 // ===== BREAKING POINT =========== //
                 //                var userID = index + 1 -jh
                 

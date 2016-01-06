@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,22 @@
                     <view key="view" contentMode="scaleToFill" id="w7Z-00-9DT" customClass="DJKFlipperView" customModule="DJKFlipper">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBv-3T-6BZ">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="0pq-8V-Cey"/>
+                                    <tabBarItem systemItem="more" id="Y5d-4t-IZR"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wBv-3T-6BZ" secondAttribute="trailing" constant="-20" id="AWB-st-Owx"/>
+                            <constraint firstItem="wBv-3T-6BZ" firstAttribute="leading" secondItem="w7Z-00-9DT" secondAttribute="leadingMargin" constant="-20" id="Lh7-TI-jlm"/>
+                            <constraint firstItem="FyE-1e-GU8" firstAttribute="top" secondItem="wBv-3T-6BZ" secondAttribute="bottom" id="wm3-bm-8dy"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="flipView" destination="w7Z-00-9DT" id="Agb-aw-dUX"/>
@@ -45,17 +61,64 @@
                                     <action selector="firebaseBtnTapped:" destination="mLH-Df-gTp" eventType="touchUpInside" id="ObC-s5-xh1"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-vs-1Ag">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="FireBase Create New User" id="Vs7-dA-Lqc">
+                                        <barButtonItem key="rightBarButtonItem" title="Current User &gt;" id="PJp-7K-ZqZ">
+                                            <connections>
+                                                <segue destination="8zz-mK-rem" kind="show" id="Hyg-Vt-css"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C81-xA-bwf" firstAttribute="centerY" secondItem="2kR-Xg-udJ" secondAttribute="centerY" id="1AB-kH-LBh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LeM-vs-1Ag" secondAttribute="trailing" constant="-20" id="9bP-gO-DzU"/>
+                            <constraint firstItem="LeM-vs-1Ag" firstAttribute="leading" secondItem="2kR-Xg-udJ" secondAttribute="leadingMargin" constant="-20" id="UwR-3Q-G4H"/>
                             <constraint firstItem="C81-xA-bwf" firstAttribute="centerX" secondItem="2kR-Xg-udJ" secondAttribute="centerX" id="XOk-SU-yai"/>
+                            <constraint firstItem="LeM-vs-1Ag" firstAttribute="top" secondItem="2kR-Xg-udJ" secondAttribute="topMargin" id="lul-ze-hCq"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dff-we-03p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="669"/>
+        </scene>
+        <!--Fire Base Auth Data View Controller-->
+        <scene sceneID="Orq-9A-UJp">
+            <objects>
+                <viewController id="8zz-mK-rem" customClass="FireBaseAuthDataViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i9V-e5-Gg0"/>
+                        <viewControllerLayoutGuide type="bottom" id="haZ-43-vxI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zTf-Zy-KHw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-P7-YKM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="FireBase Current User?" id="pan-C5-aJ3">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Br9-HT-r5g">
+                                            <connections>
+                                                <segue destination="mLH-Df-gTp" kind="show" id="8ek-c3-jJe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suM-me-t6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1333" y="669"/>
         </scene>
     </scenes>
 </document>
