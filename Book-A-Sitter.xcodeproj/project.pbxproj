@@ -19,6 +19,7 @@
 		92B9353D1C3DB38000AFF180 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9353C1C3DB38000AFF180 /* SafariViewController.swift */; };
 		92B935401C3DB66500AFF180 /* NodeFacebookLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9353E1C3DB66500AFF180 /* NodeFacebookLoginVC.swift */; };
 		92B935411C3DB66500AFF180 /* CustomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9353F1C3DB66500AFF180 /* CustomWebViewController.swift */; };
+		92D0B3A91C3E0D32003EC068 /* FacebookAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0B3A81C3E0D32003EC068 /* FacebookAuthViewController.swift */; };
 		FF90B824DAAE9EF563645EF6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096BC823FD2B9A4B1E68AA7B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		92B9353C1C3DB38000AFF180 /* SafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		92B9353E1C3DB66500AFF180 /* NodeFacebookLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeFacebookLoginVC.swift; sourceTree = "<group>"; };
 		92B9353F1C3DB66500AFF180 /* CustomWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebViewController.swift; sourceTree = "<group>"; };
+		92D0B3A81C3E0D32003EC068 /* FacebookAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuthViewController.swift; sourceTree = "<group>"; };
 		ABF6A88C7F98790238B3A495 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B55E337FC92D5CB89D3B7CE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,12 +82,14 @@
 				9243E6C11C3D115F004359C6 /* Info.plist */,
 			);
 			name = "Support Files";
+			path = "Book-A-Sitter";
 			sourceTree = "<group>";
 		};
 		9243E6A91C3D115E004359C6 = {
 			isa = PBXGroup;
 			children = (
 				9243E6B41C3D115F004359C6 /* Book-A-Sitter */,
+				920154231C3D225E004AE2B4 /* Support Files */,
 				9243E6B31C3D115F004359C6 /* Products */,
 				C75E777438D94E97AA09F97E /* Pods */,
 				657F429182DCA7E63FFE4C6A /* Frameworks */,
@@ -105,15 +109,39 @@
 			children = (
 				9243E6BC1C3D115F004359C6 /* Assets.xcassets */,
 				9243E6B91C3D115F004359C6 /* Main.storyboard */,
-				92B9353E1C3DB66500AFF180 /* NodeFacebookLoginVC.swift */,
-				92B9353F1C3DB66500AFF180 /* CustomWebViewController.swift */,
-				920154221C3D224A004AE2B4 /* FlipPages */,
-				920154231C3D225E004AE2B4 /* Support Files */,
-				920154241C3D24A9004AE2B4 /* FireBaseDataViewController.swift */,
-				92B9353A1C3DB05000AFF180 /* FireBaseAuthDataViewController.swift */,
-				92B9353C1C3DB38000AFF180 /* SafariViewController.swift */,
+				92D0B3A71C3E0D05003EC068 /* ViewControllers */,
 			);
 			path = "Book-A-Sitter";
+			sourceTree = "<group>";
+		};
+		92D0B3A51C3E0CA4003EC068 /* FireBaseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				920154241C3D24A9004AE2B4 /* FireBaseDataViewController.swift */,
+				92B9353A1C3DB05000AFF180 /* FireBaseAuthDataViewController.swift */,
+			);
+			name = FireBaseDemo;
+			sourceTree = "<group>";
+		};
+		92D0B3A61C3E0CDA003EC068 /* SF-SafariDemo */ = {
+			isa = PBXGroup;
+			children = (
+				92B9353E1C3DB66500AFF180 /* NodeFacebookLoginVC.swift */,
+				92B9353F1C3DB66500AFF180 /* CustomWebViewController.swift */,
+				92B9353C1C3DB38000AFF180 /* SafariViewController.swift */,
+			);
+			name = "SF-SafariDemo";
+			sourceTree = "<group>";
+		};
+		92D0B3A71C3E0D05003EC068 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				920154221C3D224A004AE2B4 /* FlipPages */,
+				92D0B3A61C3E0CDA003EC068 /* SF-SafariDemo */,
+				92D0B3A51C3E0CA4003EC068 /* FireBaseDemo */,
+				92D0B3A81C3E0D32003EC068 /* FacebookAuthViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C75E777438D94E97AA09F97E /* Pods */ = {
@@ -251,6 +279,7 @@
 			files = (
 				92B935411C3DB66500AFF180 /* CustomWebViewController.swift in Sources */,
 				9243E6B81C3D115F004359C6 /* ViewController.swift in Sources */,
+				92D0B3A91C3E0D32003EC068 /* FacebookAuthViewController.swift in Sources */,
 				920154101C3D16AC004AE2B4 /* PageTestViewController.swift in Sources */,
 				92B9353B1C3DB05000AFF180 /* FireBaseAuthDataViewController.swift in Sources */,
 				920154251C3D24A9004AE2B4 /* FireBaseDataViewController.swift in Sources */,

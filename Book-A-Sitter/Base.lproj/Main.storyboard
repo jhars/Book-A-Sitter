@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UBE-nO-ZcE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y8c-gx-p4B">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -15,10 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="FyE-1e-GU8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w7Z-00-9DT" customClass="DJKFlipperView" customModule="DJKFlipper">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="flipView" destination="w7Z-00-9DT" id="Agb-aw-dUX"/>
                     </connections>
@@ -69,6 +70,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dff-we-03p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="669"/>
+        </scene>
+        <!--Facebook Auth View Controller-->
+        <scene sceneID="wJB-4f-tSa">
+            <objects>
+                <viewController id="Y8c-gx-p4B" customClass="FacebookAuthViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bNB-xk-WKu"/>
+                        <viewControllerLayoutGuide type="bottom" id="hEc-Hi-nh0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Imb-k9-zko">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwS-Tk-IFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652.5" y="1406.5"/>
         </scene>
         <!--Fire Base Auth Data View Controller-->
         <scene sceneID="Orq-9A-UJp">
