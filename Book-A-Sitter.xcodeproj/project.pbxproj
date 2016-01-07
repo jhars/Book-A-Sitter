@@ -160,6 +160,7 @@
 				TargetAttributes = {
 					9243E6B11C3D115E004359C6 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7KZT492E5F;
 					};
 				};
 			};
@@ -367,7 +368,9 @@
 			baseConfigurationReference = ABF6A88C7F98790238B3A495 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Book-A-Sitter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.Book-A-Sitter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,7 +382,9 @@
 			baseConfigurationReference = B55E337FC92D5CB89D3B7CE9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Book-A-Sitter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.Book-A-Sitter";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,7 +10,6 @@ import UIKit
 import SafariServices
 
 class SafariViewController: UIViewController, SFSafariViewControllerDelegate {
-
     
     let urlString = "https://sitterbook.herokuapp.com"
     
