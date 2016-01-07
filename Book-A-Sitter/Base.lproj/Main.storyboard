@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y8c-gx-p4B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AqX-Ky-N8Q">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--FlipVC View Controller-->
+        <scene sceneID="qzm-Jb-RSs">
+            <objects>
+                <viewController id="AqX-Ky-N8Q" customClass="FlipVCViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bcS-4a-ucX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Odg-Uy-bLW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddH-AK-i7g" customClass="DJKFlipperView" customModule="DJKFlipper">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="flipView" destination="ddH-AK-i7g" id="Kzz-b1-nAa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aun-eQ-4qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218.5" y="-38.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="BCi-8o-CoU">
             <objects>
-                <viewController id="UBE-nO-ZcE" customClass="ViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="facebookLogin" id="UBE-nO-ZcE" customClass="ViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LGu-EG-VA8"/>
                         <viewControllerLayoutGuide type="bottom" id="FyE-1e-GU8"/>
@@ -17,7 +38,25 @@
                     <view key="view" contentMode="scaleToFill" id="w7Z-00-9DT" customClass="DJKFlipperView" customModule="DJKFlipper">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1g-zp-Y5H">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Facebook" id="O6H-fq-33A">
+                                        <connections>
+                                            <segue destination="Y8c-gx-p4B" kind="show" id="r8Q-Xv-mdO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FyE-1e-GU8" firstAttribute="top" secondItem="b1g-zp-Y5H" secondAttribute="bottom" id="25g-o7-off"/>
+                            <constraint firstAttribute="trailing" secondItem="b1g-zp-Y5H" secondAttribute="trailing" id="doc-TE-Hhj"/>
+                            <constraint firstItem="b1g-zp-Y5H" firstAttribute="leading" secondItem="w7Z-00-9DT" secondAttribute="leading" id="qse-5a-Uff"/>
+                            <constraint firstItem="FyE-1e-GU8" firstAttribute="top" secondItem="b1g-zp-Y5H" secondAttribute="bottom" id="z4O-EY-ib4"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -43,7 +82,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-vs-1Ag">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="44"/>
                                 <items>
-                                    <navigationItem title="FireBase Create New User" id="Vs7-dA-Lqc">
+                                    <navigationItem title="Create User" id="Vs7-dA-Lqc">
                                         <barButtonItem key="rightBarButtonItem" title="Current User &gt;" id="PJp-7K-ZqZ">
                                             <connections>
                                                 <segue destination="8zz-mK-rem" kind="show" id="Hyg-Vt-css"/>
@@ -59,6 +98,23 @@
                                     <action selector="firebaseBtnTapped:" destination="mLH-Df-gTp" eventType="touchUpInside" id="ObC-s5-xh1"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIy-yv-KmV">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="GIn-Hb-HuS">
+                                        <barButtonItem key="leftBarButtonItem" title="Flipper" id="cAE-8i-y5J">
+                                            <connections>
+                                                <segue destination="UBE-nO-ZcE" kind="show" id="JaS-qP-BJg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Facebook" id="7bW-s1-WlI">
+                                            <connections>
+                                                <segue destination="Y8c-gx-p4B" kind="show" id="dZP-zX-xzH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -74,7 +130,7 @@
         <!--Facebook Auth View Controller-->
         <scene sceneID="wJB-4f-tSa">
             <objects>
-                <viewController id="Y8c-gx-p4B" customClass="FacebookAuthViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="facebookAuth" id="Y8c-gx-p4B" customClass="FacebookAuthViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bNB-xk-WKu"/>
                         <viewControllerLayoutGuide type="bottom" id="hEc-Hi-nh0"/>
@@ -82,13 +138,37 @@
                     <view key="view" contentMode="scaleToFill" id="Imb-k9-zko">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0b-jJ-ZXx">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Flipper" id="Ktm-Wr-s3A">
+                                        <connections>
+                                            <segue destination="AqX-Ky-N8Q" kind="show" id="h3n-gf-XAB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGo-jI-frV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="mfm-4T-j4d">
+                                        <barButtonItem key="rightBarButtonItem" title="FireBase" id="Swb-Ps-cZ5">
+                                            <connections>
+                                                <segue destination="mLH-Df-gTp" kind="show" id="oPd-kN-4ws"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwS-Tk-IFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652.5" y="1406.5"/>
+            <point key="canvasLocation" x="1078.5" y="-38.5"/>
         </scene>
         <!--Fire Base Auth Data View Controller-->
         <scene sceneID="Orq-9A-UJp">
@@ -111,11 +191,7 @@
                                                 <segue destination="mLH-Df-gTp" kind="show" id="8ek-c3-jJe"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="SFSafariVC" id="mUp-4n-yce">
-                                            <connections>
-                                                <segue destination="zHk-wH-UQ7" kind="show" id="yRF-U3-FVw"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="SFSafariVC" id="mUp-4n-yce"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -133,46 +209,9 @@
             </objects>
             <point key="canvasLocation" x="1078.5" y="668.5"/>
         </scene>
-        <!--Safari View Controller-->
-        <scene sceneID="3bW-t3-njO">
-            <objects>
-                <viewController id="zHk-wH-UQ7" customClass="SafariViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WL9-M9-WgF"/>
-                        <viewControllerLayoutGuide type="bottom" id="OtX-jQ-Aov"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yGi-to-LQR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHB-iC-aIp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Login via Node thru Safari" id="0lT-st-Cbh"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydE-5Z-Do8">
-                                <rect key="frame" x="91" y="319" width="193" height="30"/>
-                                <state key="normal" title="Open With SFSafariServices"/>
-                                <connections>
-                                    <action selector="openWithSafariVC:" destination="zHk-wH-UQ7" eventType="touchUpInside" id="yx9-A7-Vor"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ydE-5Z-Do8" firstAttribute="centerY" secondItem="yGi-to-LQR" secondAttribute="centerY" id="0fB-Fu-6Kw"/>
-                            <constraint firstItem="ydE-5Z-Do8" firstAttribute="centerX" secondItem="yGi-to-LQR" secondAttribute="centerX" id="T1N-Ng-q9F"/>
-                            <constraint firstItem="RHB-iC-aIp" firstAttribute="top" secondItem="yGi-to-LQR" secondAttribute="topMargin" id="VDc-kB-xIO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RHB-iC-aIp" secondAttribute="trailing" constant="-20" id="jMx-bF-bjX"/>
-                            <constraint firstItem="RHB-iC-aIp" firstAttribute="leading" secondItem="yGi-to-LQR" secondAttribute="leadingMargin" constant="-20" id="kbm-Pg-Bts"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fbj-O7-kPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1520.5" y="668.5"/>
-        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oPd-kN-4ws"/>
+        <segue reference="r8Q-Xv-mdO"/>
+    </inferredMetricsTieBreakers>
 </document>

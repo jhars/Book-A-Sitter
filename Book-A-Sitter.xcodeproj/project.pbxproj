@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		920154101C3D16AC004AE2B4 /* PageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201540F1C3D16AC004AE2B4 /* PageTestViewController.swift */; };
-		920154211C3D1F3D004AE2B4 /* PageTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920154201C3D1F3D004AE2B4 /* PageTestViewController.xib */; };
 		920154251C3D24A9004AE2B4 /* FireBaseDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920154241C3D24A9004AE2B4 /* FireBaseDataViewController.swift */; };
 		9243E6B61C3D115F004359C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243E6B51C3D115F004359C6 /* AppDelegate.swift */; };
 		9243E6B81C3D115F004359C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243E6B71C3D115F004359C6 /* ViewController.swift */; };
 		9243E6BB1C3D115F004359C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9243E6B91C3D115F004359C6 /* Main.storyboard */; };
 		9243E6BD1C3D115F004359C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9243E6BC1C3D115F004359C6 /* Assets.xcassets */; };
 		9243E6C01C3D115F004359C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9243E6BE1C3D115F004359C6 /* LaunchScreen.storyboard */; };
+		9294AAE51C3E3A690062CAA8 /* FlipVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294AAE41C3E3A690062CAA8 /* FlipVCViewController.swift */; };
+		9294AAEE1C3E43250062CAA8 /* flipper.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9294AAED1C3E43250062CAA8 /* flipper.xib */; };
+		9294AAF01C3E43370062CAA8 /* flipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294AAEF1C3E43370062CAA8 /* flipper.swift */; };
+		9294AAF21C3E47400062CAA8 /* flipperTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294AAF11C3E47400062CAA8 /* flipperTestViewController.swift */; };
+		9294AAF51C3E4BD50062CAA8 /* testFlipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294AAF31C3E4BD50062CAA8 /* testFlipperViewController.swift */; };
+		9294AAF61C3E4BD50062CAA8 /* testFlipperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9294AAF41C3E4BD50062CAA8 /* testFlipperViewController.xib */; };
 		92B9353B1C3DB05000AFF180 /* FireBaseAuthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9353A1C3DB05000AFF180 /* FireBaseAuthDataViewController.swift */; };
-		92B9353D1C3DB38000AFF180 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9353C1C3DB38000AFF180 /* SafariViewController.swift */; };
-		92B935401C3DB66500AFF180 /* NodeFacebookLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9353E1C3DB66500AFF180 /* NodeFacebookLoginVC.swift */; };
-		92B935411C3DB66500AFF180 /* CustomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9353F1C3DB66500AFF180 /* CustomWebViewController.swift */; };
 		92D0B3A91C3E0D32003EC068 /* FacebookAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0B3A81C3E0D32003EC068 /* FacebookAuthViewController.swift */; };
 		FF90B824DAAE9EF563645EF6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096BC823FD2B9A4B1E68AA7B /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -26,7 +28,6 @@
 /* Begin PBXFileReference section */
 		096BC823FD2B9A4B1E68AA7B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9201540F1C3D16AC004AE2B4 /* PageTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTestViewController.swift; sourceTree = "<group>"; };
-		920154201C3D1F3D004AE2B4 /* PageTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageTestViewController.xib; sourceTree = "<group>"; };
 		920154241C3D24A9004AE2B4 /* FireBaseDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseDataViewController.swift; sourceTree = "<group>"; };
 		9243E6B21C3D115F004359C6 /* Book-A-Sitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book-A-Sitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9243E6B51C3D115F004359C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,10 +36,13 @@
 		9243E6BC1C3D115F004359C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9243E6BF1C3D115F004359C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9243E6C11C3D115F004359C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9294AAE41C3E3A690062CAA8 /* FlipVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipVCViewController.swift; sourceTree = "<group>"; };
+		9294AAED1C3E43250062CAA8 /* flipper.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = flipper.xib; sourceTree = "<group>"; };
+		9294AAEF1C3E43370062CAA8 /* flipper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flipper.swift; sourceTree = "<group>"; };
+		9294AAF11C3E47400062CAA8 /* flipperTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flipperTestViewController.swift; sourceTree = "<group>"; };
+		9294AAF31C3E4BD50062CAA8 /* testFlipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testFlipperViewController.swift; sourceTree = "<group>"; };
+		9294AAF41C3E4BD50062CAA8 /* testFlipperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testFlipperViewController.xib; sourceTree = "<group>"; };
 		92B9353A1C3DB05000AFF180 /* FireBaseAuthDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseAuthDataViewController.swift; sourceTree = "<group>"; };
-		92B9353C1C3DB38000AFF180 /* SafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
-		92B9353E1C3DB66500AFF180 /* NodeFacebookLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeFacebookLoginVC.swift; sourceTree = "<group>"; };
-		92B9353F1C3DB66500AFF180 /* CustomWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebViewController.swift; sourceTree = "<group>"; };
 		92D0B3A81C3E0D32003EC068 /* FacebookAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuthViewController.swift; sourceTree = "<group>"; };
 		ABF6A88C7F98790238B3A495 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B55E337FC92D5CB89D3B7CE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,9 +71,8 @@
 		920154221C3D224A004AE2B4 /* FlipPages */ = {
 			isa = PBXGroup;
 			children = (
-				9201540F1C3D16AC004AE2B4 /* PageTestViewController.swift */,
 				9243E6B71C3D115F004359C6 /* ViewController.swift */,
-				920154201C3D1F3D004AE2B4 /* PageTestViewController.xib */,
+				9201540F1C3D16AC004AE2B4 /* PageTestViewController.swift */,
 			);
 			name = FlipPages;
 			sourceTree = "<group>";
@@ -114,6 +117,26 @@
 			path = "Book-A-Sitter";
 			sourceTree = "<group>";
 		};
+		9294AAF71C3E4BDE0062CAA8 /* testFlipperVC */ = {
+			isa = PBXGroup;
+			children = (
+				9294AAF41C3E4BD50062CAA8 /* testFlipperViewController.xib */,
+				9294AAF31C3E4BD50062CAA8 /* testFlipperViewController.swift */,
+			);
+			name = testFlipperVC;
+			sourceTree = "<group>";
+		};
+		9294AAF81C3E4D450062CAA8 /* FlipperDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9294AAE41C3E3A690062CAA8 /* FlipVCViewController.swift */,
+				9294AAEF1C3E43370062CAA8 /* flipper.swift */,
+				9294AAED1C3E43250062CAA8 /* flipper.xib */,
+				9294AAF11C3E47400062CAA8 /* flipperTestViewController.swift */,
+			);
+			name = FlipperDemo;
+			sourceTree = "<group>";
+		};
 		92D0B3A51C3E0CA4003EC068 /* FireBaseDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,21 +146,12 @@
 			name = FireBaseDemo;
 			sourceTree = "<group>";
 		};
-		92D0B3A61C3E0CDA003EC068 /* SF-SafariDemo */ = {
-			isa = PBXGroup;
-			children = (
-				92B9353E1C3DB66500AFF180 /* NodeFacebookLoginVC.swift */,
-				92B9353F1C3DB66500AFF180 /* CustomWebViewController.swift */,
-				92B9353C1C3DB38000AFF180 /* SafariViewController.swift */,
-			);
-			name = "SF-SafariDemo";
-			sourceTree = "<group>";
-		};
 		92D0B3A71C3E0D05003EC068 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9294AAF71C3E4BDE0062CAA8 /* testFlipperVC */,
+				9294AAF81C3E4D450062CAA8 /* FlipperDemo */,
 				920154221C3D224A004AE2B4 /* FlipPages */,
-				92D0B3A61C3E0CDA003EC068 /* SF-SafariDemo */,
 				92D0B3A51C3E0CA4003EC068 /* FireBaseDemo */,
 				92D0B3A81C3E0D32003EC068 /* FacebookAuthViewController.swift */,
 			);
@@ -217,8 +231,9 @@
 			files = (
 				9243E6C01C3D115F004359C6 /* LaunchScreen.storyboard in Resources */,
 				9243E6BD1C3D115F004359C6 /* Assets.xcassets in Resources */,
+				9294AAEE1C3E43250062CAA8 /* flipper.xib in Resources */,
 				9243E6BB1C3D115F004359C6 /* Main.storyboard in Resources */,
-				920154211C3D1F3D004AE2B4 /* PageTestViewController.xib in Resources */,
+				9294AAF61C3E4BD50062CAA8 /* testFlipperViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,14 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B935411C3DB66500AFF180 /* CustomWebViewController.swift in Sources */,
 				9243E6B81C3D115F004359C6 /* ViewController.swift in Sources */,
+				9294AAF51C3E4BD50062CAA8 /* testFlipperViewController.swift in Sources */,
 				92D0B3A91C3E0D32003EC068 /* FacebookAuthViewController.swift in Sources */,
+				9294AAF01C3E43370062CAA8 /* flipper.swift in Sources */,
 				920154101C3D16AC004AE2B4 /* PageTestViewController.swift in Sources */,
 				92B9353B1C3DB05000AFF180 /* FireBaseAuthDataViewController.swift in Sources */,
+				9294AAE51C3E3A690062CAA8 /* FlipVCViewController.swift in Sources */,
+				9294AAF21C3E47400062CAA8 /* flipperTestViewController.swift in Sources */,
 				920154251C3D24A9004AE2B4 /* FireBaseDataViewController.swift in Sources */,
-				92B9353D1C3DB38000AFF180 /* SafariViewController.swift in Sources */,
-				92B935401C3DB66500AFF180 /* NodeFacebookLoginVC.swift in Sources */,
 				9243E6B61C3D115F004359C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

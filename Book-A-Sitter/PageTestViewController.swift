@@ -18,6 +18,18 @@ class PageTestViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+
+    @IBAction func xibToStoryBoardBtn(sender: AnyObject) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            storyboardWithName("Main", bundle: nil)
+        var initViewController: UIViewController = storyBoard.instantiateViewControllerWithIdentifier("facebookLogin")
+//        [self.window setRootViewController:initViewController];
+//        self.window.rootViewController = initViewController
+        self.navigationController!.pushViewController(initViewController, animated: true)
+
+        
+        //.instantiateInitialViewController()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
