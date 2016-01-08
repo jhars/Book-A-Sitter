@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AqX-Ky-N8Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AqX-Ky-N8Q">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -8,90 +8,57 @@
         <!--FlipVC View Controller-->
         <scene sceneID="qzm-Jb-RSs">
             <objects>
-                <viewController id="AqX-Ky-N8Q" customClass="FlipVCViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="AqX-Ky-N8Q" customClass="FlipVCViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bcS-4a-ucX"/>
-                        <viewControllerLayoutGuide type="bottom" id="Odg-Uy-bLW"/>
+                        <viewControllerLayoutGuide type="top" id="wLl-P0-dvP"/>
+                        <viewControllerLayoutGuide type="bottom" id="C5I-uW-UaE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ddH-AK-i7g" customClass="DJKFlipperView" customModule="DJKFlipper">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DTi-tq-dc3" customClass="DJKFlipperView" customModule="DJKFlipper">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="flipView" destination="ddH-AK-i7g" id="Kzz-b1-nAa"/>
+                        <outlet property="testDJK" destination="DTi-tq-dc3" id="EJf-S3-tio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aun-eQ-4qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218.5" y="-38.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="BCi-8o-CoU">
-            <objects>
-                <viewController storyboardIdentifier="facebookLogin" id="UBE-nO-ZcE" customClass="ViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LGu-EG-VA8"/>
-                        <viewControllerLayoutGuide type="bottom" id="FyE-1e-GU8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w7Z-00-9DT" customClass="DJKFlipperView" customModule="DJKFlipper">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1g-zp-Y5H">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Facebook" id="O6H-fq-33A">
-                                        <connections>
-                                            <segue destination="Y8c-gx-p4B" kind="show" id="r8Q-Xv-mdO"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="FyE-1e-GU8" firstAttribute="top" secondItem="b1g-zp-Y5H" secondAttribute="bottom" id="25g-o7-off"/>
-                            <constraint firstAttribute="trailing" secondItem="b1g-zp-Y5H" secondAttribute="trailing" id="doc-TE-Hhj"/>
-                            <constraint firstItem="b1g-zp-Y5H" firstAttribute="leading" secondItem="w7Z-00-9DT" secondAttribute="leading" id="qse-5a-Uff"/>
-                            <constraint firstItem="FyE-1e-GU8" firstAttribute="top" secondItem="b1g-zp-Y5H" secondAttribute="bottom" id="z4O-EY-ib4"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="flipView" destination="w7Z-00-9DT" id="Agb-aw-dUX"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Htz-Ls-vRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="653" y="-38"/>
+            <point key="canvasLocation" x="-34" y="151"/>
         </scene>
         <!--Fire Base Data View Controller-->
         <scene sceneID="SAy-W7-AAv">
             <objects>
                 <viewController id="mLH-Df-gTp" customClass="FireBaseDataViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3i0-ox-l13"/>
-                        <viewControllerLayoutGuide type="bottom" id="evI-zg-SfF"/>
+                        <viewControllerLayoutGuide type="top" id="wGl-wx-vDw"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLG-hL-M2w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2kR-Xg-udJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-vs-1Ag">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="44"/>
+                                <rect key="frame" x="-4" y="0.0" width="604" height="44"/>
                                 <items>
                                     <navigationItem title="Create User" id="Vs7-dA-Lqc">
                                         <barButtonItem key="rightBarButtonItem" title="Current User &gt;" id="PJp-7K-ZqZ">
                                             <connections>
-                                                <segue destination="8zz-mK-rem" kind="show" id="Hyg-Vt-css"/>
+                                                <segue destination="8zz-mK-rem" kind="modal" id="Hyg-Vt-css"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C81-xA-bwf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C81-xA-bwf">
                                 <rect key="frame" x="114" y="282" width="147" height="103"/>
                                 <state key="normal" title="FIRE!"/>
                                 <connections>
@@ -102,14 +69,10 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="GIn-Hb-HuS">
-                                        <barButtonItem key="leftBarButtonItem" title="Flipper" id="cAE-8i-y5J">
-                                            <connections>
-                                                <segue destination="UBE-nO-ZcE" kind="show" id="JaS-qP-BJg"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Flipper" id="cAE-8i-y5J"/>
                                         <barButtonItem key="rightBarButtonItem" title="Facebook" id="7bW-s1-WlI">
                                             <connections>
-                                                <segue destination="Y8c-gx-p4B" kind="show" id="dZP-zX-xzH"/>
+                                                <segue destination="Y8c-gx-p4B" kind="modal" id="dZP-zX-xzH"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -117,45 +80,42 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="C81-xA-bwf" firstAttribute="centerX" secondItem="2kR-Xg-udJ" secondAttribute="centerX" id="PH6-Lh-jf5"/>
-                            <constraint firstItem="C81-xA-bwf" firstAttribute="centerY" secondItem="2kR-Xg-udJ" secondAttribute="centerY" id="c5W-kK-8Ur"/>
-                        </constraints>
                     </view>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dff-we-03p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="669"/>
+            <point key="canvasLocation" x="360.80000000000001" y="629.05999999999995"/>
         </scene>
         <!--Facebook Auth View Controller-->
         <scene sceneID="wJB-4f-tSa">
             <objects>
                 <viewController storyboardIdentifier="facebookAuth" id="Y8c-gx-p4B" customClass="FacebookAuthViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bNB-xk-WKu"/>
-                        <viewControllerLayoutGuide type="bottom" id="hEc-Hi-nh0"/>
+                        <viewControllerLayoutGuide type="top" id="nwT-lL-Tpc"/>
+                        <viewControllerLayoutGuide type="bottom" id="og6-2Z-l9O"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Imb-k9-zko">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0b-jJ-ZXx">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="-4" y="524" width="328" height="44"/>
                                 <items>
                                     <barButtonItem title="Flipper" id="Ktm-Wr-s3A">
                                         <connections>
-                                            <segue destination="AqX-Ky-N8Q" kind="show" id="h3n-gf-XAB"/>
+                                            <segue destination="AqX-Ky-N8Q" kind="modal" id="4sj-LR-0sR"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGo-jI-frV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="-4" y="0.0" width="328" height="44"/>
                                 <items>
                                     <navigationItem id="mfm-4T-j4d">
                                         <barButtonItem key="rightBarButtonItem" title="FireBase" id="Swb-Ps-cZ5">
                                             <connections>
-                                                <segue destination="mLH-Df-gTp" kind="show" id="oPd-kN-4ws"/>
+                                                <segue destination="mLH-Df-gTp" kind="modal" id="oPd-kN-4ws"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -164,31 +124,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwS-Tk-IFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078.5" y="-38.5"/>
+            <point key="canvasLocation" x="775.5" y="-149.5"/>
         </scene>
         <!--Fire Base Auth Data View Controller-->
         <scene sceneID="Orq-9A-UJp">
             <objects>
                 <viewController id="8zz-mK-rem" customClass="FireBaseAuthDataViewController" customModule="Book_A_Sitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="i9V-e5-Gg0"/>
-                        <viewControllerLayoutGuide type="bottom" id="haZ-43-vxI"/>
+                        <viewControllerLayoutGuide type="top" id="Wk6-v0-Sls"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hl3-Th-VVI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zTf-Zy-KHw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-P7-YKM">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-P7-YKM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Current User" id="pan-C5-aJ3">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Br9-HT-r5g">
                                             <connections>
-                                                <segue destination="mLH-Df-gTp" kind="show" id="8ek-c3-jJe"/>
+                                                <segue destination="mLH-Df-gTp" kind="modal" id="8ek-c3-jJe"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="SFSafariVC" id="mUp-4n-yce"/>
@@ -197,21 +157,15 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vO9-P7-YKM" firstAttribute="top" secondItem="zTf-Zy-KHw" secondAttribute="top" id="Bjg-rH-Bo1"/>
-                            <constraint firstItem="vO9-P7-YKM" firstAttribute="leading" secondItem="zTf-Zy-KHw" secondAttribute="leading" id="Z37-jv-9D9"/>
-                            <constraint firstAttribute="trailing" secondItem="vO9-P7-YKM" secondAttribute="trailing" id="xJg-k9-elD"/>
-                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suM-me-t6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078.5" y="668.5"/>
+            <point key="canvasLocation" x="940.5" y="608.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="oPd-kN-4ws"/>
-        <segue reference="r8Q-Xv-mdO"/>
     </inferredMetricsTieBreakers>
 </document>

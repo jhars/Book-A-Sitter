@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -13,34 +13,45 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lhz-6U-DFW">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="325"/>
-                </imageView>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iL-QT-9hU">
-                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                    <items>
-                        <navigationItem title="Nib Nav" id="SnM-Uf-tbw">
-                            <barButtonItem key="rightBarButtonItem" title="Main" id="yBS-gm-6Mz">
-                                <connections>
-                                    <action selector="mainBtnTapped:" destination="-1" id="X2B-eW-IFQ"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8u-qF-SG5">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhz-6U-DFW">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggt-eQ-fOB">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ggt-eQ-fOB" firstAttribute="top" secondItem="A8u-qF-SG5" secondAttribute="top" id="Pbp-ZX-h4S"/>
+                        <constraint firstAttribute="trailing" secondItem="Ggt-eQ-fOB" secondAttribute="trailing" id="TFJ-s0-bGU"/>
+                        <constraint firstItem="lhz-6U-DFW" firstAttribute="leading" secondItem="A8u-qF-SG5" secondAttribute="leading" id="X0A-wE-Bsm"/>
+                        <constraint firstItem="lhz-6U-DFW" firstAttribute="top" secondItem="A8u-qF-SG5" secondAttribute="top" id="Z51-iP-YUW"/>
+                        <constraint firstAttribute="bottom" secondItem="lhz-6U-DFW" secondAttribute="bottom" id="bpv-Dg-Kgu"/>
+                        <constraint firstItem="Ggt-eQ-fOB" firstAttribute="leading" secondItem="A8u-qF-SG5" secondAttribute="leading" id="fi3-mJ-lmw"/>
+                        <constraint firstAttribute="trailing" secondItem="lhz-6U-DFW" secondAttribute="trailing" id="gAd-EW-fQG"/>
+                        <constraint firstAttribute="bottom" secondItem="Ggt-eQ-fOB" secondAttribute="bottom" id="lbq-1C-C2I"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="lhz-6U-DFW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KUf-TS-VOP"/>
-                <constraint firstAttribute="bottom" secondItem="lhz-6U-DFW" secondAttribute="bottom" constant="342" id="P8d-Xb-Ina"/>
-                <constraint firstItem="lhz-6U-DFW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="usf-Rx-rDX"/>
-                <constraint firstAttribute="trailing" secondItem="lhz-6U-DFW" secondAttribute="trailing" id="wgz-3q-L79"/>
+                <constraint firstAttribute="bottom" secondItem="A8u-qF-SG5" secondAttribute="bottom" id="FEV-Yi-uPx"/>
+                <constraint firstItem="A8u-qF-SG5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="I9x-ka-zDP"/>
+                <constraint firstItem="A8u-qF-SG5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R7T-TP-jtd"/>
+                <constraint firstAttribute="trailing" secondItem="A8u-qF-SG5" secondAttribute="trailing" id="SUw-Sf-x7s"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="348.5" y="420.5"/>
+            <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+            <point key="canvasLocation" x="356" y="420"/>
         </view>
     </objects>
 </document>
